@@ -1,5 +1,5 @@
 {
-  "name": "next-unocss",
+  "name": "thex",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -20,12 +20,15 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.1.66",
+    "@iconify-json/simple-line-icons": "^1.1.8",
     "@types/node": "^20.12.10",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
     "@unocss/cli": "^0.58.9",
     "@unocss/postcss": "^0.58.9",
     "@unocss/preset-attributify": "^0.58.9",
+    "@unocss/preset-icons": "^0.59.4",
     "@unocss/preset-mini": "^0.58.9",
     "eslint-config-next": "14.0.4",
     "postcss": "^8.4.38",

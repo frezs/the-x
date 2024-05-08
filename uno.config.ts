@@ -9,7 +9,7 @@ export default defineConfig({
     presetIcons({
       collections: {
         mdi: () => import('@iconify-json/mdi/icons.json').then(i => i.default),
-        'simple-line-icons': () => import('@iconify-json/simple-line-icons/icons.json').then(i => i.default)
+        'simple': () => import('@iconify-json/simple-line-icons/icons.json').then(i => i.default)
       },
       // Optional
       extraProperties: {

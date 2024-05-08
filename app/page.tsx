@@ -1,36 +1,31 @@
+'use client'
+
 import React from 'react'
 import { header } from '@/data/mock/common'
+import PostRecommend from '@/components/post-recommend'
+import Header from '@/components/layout/header'
+import PostTopic from '@/components/post-topic'
+import '@/styles/base.css'
+import PostHeadline from '@/components/post-headline'
+
+function onSearch(value: string) {
+  // 搜索逻辑
+  console.log('点击搜索:', value)
+}
 
 export default function Home() {
-  const { navLinks, logo } = header
+  const { navLinks, logo, recommend } = header
   return (
     <>
-      <header className="flex h-55px justify-between items-center">
-        <a href="/">
-          <figure className="relative w-190px h-full">
-            <img className="w-full h-full" src={logo} alt="logo"/>
-          </figure>
-        </a>
-        <nav>
-          <ul className={`flex justify-center items-center`}>
-            {navLinks.map((item, index) => (
-              <li
-                className={`relative mx-15px h-32px lh-32px text-16px`}
-                hover={`before:content-empty`}
-                before={`absolute left--50% translate-x-50% w-full bottom-0 h-4px rounded-4px bg-blue`}
-                key={item.name}>
-                <a className={`text-center`} href={item.href}>{item.name}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <search>
-
-        </search>
-      </header>
+      <Header logo="/next.svg" navItems={navLinks} onSearch={onSearch}></Header>
       <main className="flex min-h-screen flex-col items-center">
-        <div className="text-2xl">This is Home!!!</div>
+        <div className="flex justify-between mb-15px">
+          <PostRecommend recommend={recommend} className="mr-10px"></PostRecommend>
+          <PostTopic></PostTopic>
+        </div>
+        <div className="flex flex-col mb-15px">
+          <PostHeadline></PostHeadline>
+        </div>
       </main>
     </>
   )

@@ -1,2 +1,6 @@
 @import '@unocss/reset/tailwind.css';
 @unocss all;
+
+body {
+  background-color: #f5f5f5;
+}

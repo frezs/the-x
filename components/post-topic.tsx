@@ -12,7 +12,7 @@ export interface IPostTopicProps {
 function PostTopic({ className, ...props }: IPostTopicProps & React.HTMLAttributes<HTMLDivElement>) {
   return (
     <CardWrap className={cn('flex flex-col w-300px', className)}>
-      <HeadTile icon="i-mdi:book" title="话题"
+      <HeadTile icon="i-mdi:book" label="话题"
                 ext={[{ name: '更多', url: '#' }]}></HeadTile>
       {
         Array(5).fill(0).map((_, index) => (

@@ -40,7 +40,7 @@ export function PostRecommend({ className, ...props }: IPostRecommendProps & Rea
   return (
 
     <CardWrap className={cn('flex flex-col w-760px', className)}>
-      <HeadTile icon={recommend.icon} title={recommend.module} ext={recommend.ext}></HeadTile>
+      <HeadTile icon={recommend.icon} label={recommend.module} ext={recommend.ext}></HeadTile>
       <div className="flex justify-between">
         < PostRecommendFirstItem item={recommend.items[0]}/>
         <div className="flex-1 pl-20px flex flex-col">

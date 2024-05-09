@@ -14,7 +14,7 @@ export interface IPostHeadline {
 function PostHeadline({ className, ...props }: IPostHeadline & React.HTMLAttributes<HTMLDivElement>) {
   return (
     <CardWrap className={cn('flex w-full flex-col', className)}>
-      <HeadTile icon="i-mdi:book" title="头条" ext={[{ name: '更多 >', url: '#' }]}></HeadTile>
+      <HeadTile icon="i-mdi:book" label="头条" ext={[{ name: '更多 >', url: '#' }]}></HeadTile>
       <div className="flex flex-wrap justify-between">
         {
           Array(6).fill(0).map((_, index) => (

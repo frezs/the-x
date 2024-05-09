@@ -8,7 +8,7 @@ export const metadata = {
 export default function App({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-    <body class="max-w-1070px m-auto">{children}</body>
+    <body className="max-w-1070px m-auto">{children}</body>
     </html>
   )
 }

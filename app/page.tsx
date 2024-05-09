@@ -7,6 +7,7 @@ import Header from '@/components/layout/header'
 import PostTopic from '@/components/post-topic'
 import '@/styles/base.css'
 import PostHeadline from '@/components/post-headline'
+import PostInformation from '@/components/post-information'
 
 function onSearch(value: string) {
   // 搜索逻辑
@@ -18,13 +19,17 @@ export default function Home() {
   return (
     <>
       <Header logo="/next.svg" navItems={navLinks} onSearch={onSearch}></Header>
-      <main className="flex min-h-screen flex-col items-center">
-        <div className="flex justify-between mb-15px">
+      <main className="mt-15px flex min-h-screen flex-col items-center">
+        <div className="flex justify-between children:mb-15px last:mb-0">
           <PostRecommend recommend={recommend} className="mr-10px"></PostRecommend>
-          <PostTopic></PostTopic>
+          <PostTopic className=""></PostTopic>
         </div>
-        <div className="flex flex-col mb-15px">
+        <div className="flex flex-col mb-15px children:mb-15px last:mb-0">
           <PostHeadline></PostHeadline>
+          <div className="flex justify-between children:mb-15px last:mb-0">
+            <PostInformation className="mr-10px w-760px"></PostInformation>
+            <PostTopic className="min-w-300px"></PostTopic>
+          </div>
         </div>
       </main>
     </>

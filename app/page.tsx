@@ -8,6 +8,7 @@ import PostTopic from '@/components/post-topic'
 import '@/styles/base.css'
 import PostHeadline from '@/components/post-headline'
 import PostInformation from '@/components/post-information'
+import PostRank from '@/components/post-rank'
 
 function onSearch(value: string) {
   // 搜索逻辑
@@ -28,7 +29,7 @@ export default function Home() {
           <PostHeadline></PostHeadline>
           <div className="flex justify-between children:mb-15px last:mb-0">
             <PostInformation className="mr-10px w-760px"></PostInformation>
-            <PostTopic className="min-w-300px"></PostTopic>
+            <PostRank className="min-w-300px"></PostRank>
           </div>
         </div>
       </main>
